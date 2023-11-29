@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class ImagemProxy implements ImagemInterface {
 
-    public static HashMap<String, Imagem> imageCache = new HashMap<>();
+    public static HashMap<String, Imagem> imagemCache = new HashMap<>();
     private Imagem imagem;
     private String localImagem;
 
@@ -22,12 +22,12 @@ public class ImagemProxy implements ImagemInterface {
         // Verifica se o objeto real foi instanciado
         if (imagem == null) {
             // Verifica se a imagem está no cache ou precisa ser adicionada
-            if (imageCache.containsKey(localImagem)) {
-                imagem = imageCache.get(localImagem);
+            if (imagemCache.containsKey(localImagem)) {
+                imagem = imagemCache.get(localImagem);
                 System.out.println("Imagem " + localImagem + " encontrada no cache");
             } else {
                 imagem = new Imagem(localImagem);
-                imageCache.put(localImagem, imagem);
+                imagemCache.put(localImagem, imagem);
                 System.out.println("Imagem " + localImagem + " adicionada ao cache");
             }
         }
