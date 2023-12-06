@@ -40,7 +40,7 @@ public class Imagem implements ImagemInterface {
     public void mostrarImagem() {
         System.out.println("Mostrando a imagem: " + localImagem + "\n");
         SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("Image from Byte Array");
+            JFrame frame = new JFrame("Imagem de Byte Array");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
             try {
